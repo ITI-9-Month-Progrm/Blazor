@@ -1,0 +1,42 @@
+﻿@page "/Tracks"
+<h3>TracksOverview</h3>
+<div>
+    <a class="btn btn-dark btn-outline-light" href="@($"AddTrack")">Create</a>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var track in tracks)
+        {
+        <tr>
+            <td>@track.Name</td>
+            <td>@track.Description</td>
+            <td><a href="@($"TrackDetails/{track.Track_ID}")" class="btn btn-info">Details</a></td>
+            <td><a href="@($"TraineeUpdate/{track.Track_ID}")" class="btn btn-warning">Update</a></td>
+            <td><a href="@($"TraineeDelete/{track.Track_ID}")" class="btn btn-danger">Delete</a></td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    List<Track> tracks;
+    protected override Task OnInitializedAsync()
+    {
+       
+        tracks = MyMocaData.tracks;
+
+        return base.OnInitializedAsync();
+    }
+
+}

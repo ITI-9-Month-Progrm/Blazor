@@ -1,0 +1,52 @@
+﻿@page "/TraineeUpdate/{Trainee_ID:int}"
+
+
+@if (!saved)
+{
+
+    <h3 class="card-title">Trainee Update</h3>
+    <EditForm Model="@traineeEdited" OnValidSubmit="@HandleValidSubmit" OnInvalidSubmit="@HandleInvalidSubmit">
+
+
+        <div class="form-group row">
+            <label for="id" class="col-form-label">Trainee_ID</label>
+            <input class="form-control" Value="@traineeEdited.Trainee_ID" readonly />
+        </div>
+        <div class="form-group row">
+            <label for="name" class="col-form-label">Name</label>
+            <InputText class="form-control" @bind-Value="@traineeEdited.Name"></InputText>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-form-label">Email</label>
+            <InputText class="form-control" @bind-Value="@traineeEdited.Email"></InputText>
+        </div>
+        <div class="form-group row">
+            <label for="phone" class="col-form-label">Mobile_Number</label>
+            <InputText class="form-control" @bind-Value="@traineeEdited.MobileNumber"></InputText>
+        </div>
+        <div class="form-group row">
+            <label for="gender" class="col-form-label">Gender: </label>
+            <InputSelect id="gender" class="form-control" @bind-Value=@traineeEdited.Gender>
+                <option value="@(Gender.male)">Male</option>
+                <option value="@(Gender.female)">Female</option>
+            </InputSelect>
+        </div>
+        <div class="form-group row">
+            <label for="Birthdate" class="col-form-label">Birthdate</label>
+            <InputDate class="form-control" @bind-Value="@traineeEdited.Birthdate"></InputDate>
+        </div>
+        <div class="form-group row">
+            <label for="grad" class="col-form-label">Graduated: </label>
+            <InputSelect id="gradinput" class="form-control" @bind-Value=@traineeEdited.IsGraduated>
+                <option value="@(Graduated.Graduated)">Yes</option>
+                <option value="@(Graduated.Student)">No</option>
+            </InputSelect>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+    </EditForm>
+
+}
+else
+{
+    <div class="alert-success">Trainee updated successfully</div>
+}

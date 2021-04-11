@@ -1,0 +1,42 @@
+﻿@page "/TraineeDetails/{Trainee_ID:int}"
+<h3>Trainee Details</h3>
+<div>
+    <label>Name : </label>
+    <p> @traineeDetails.Name </p>
+    <br />
+    <label>Email : </label>
+    <p> @traineeDetails.Email </p>
+    <br />
+    <label>MobileNumber : </label>
+    <p> @traineeDetails.MobileNumber </p>
+    <br />
+    <label>Gender : </label>
+    <p> @traineeDetails.Gender </p>
+    <br />
+    <label>Birthdate : </label>
+    <p> @traineeDetails.Birthdate </p>
+    <br />
+    <label>Graduated : </label>
+    <p> @traineeDetails.IsGraduated </p>
+    <br />
+</div>
+
+@code {
+    [Parameter]
+    public int Trainee_ID { get; set; }
+
+    List<Trainee> trainees;
+    public Trainee traineeDetails;
+
+    protected override Task OnInitializedAsync()
+    {
+        
+        trainees = MyMocaData.trainees;
+
+        traineeDetails = trainees.FirstOrDefault(T => T.Trainee_ID == Trainee_ID);
+
+
+        return base.OnInitializedAsync();
+    }
+
+}

@@ -1,0 +1,53 @@
+﻿@page "/TraineeDelete/{Trainee_ID:int}"
+<h3>Delete Trainee</h3>
+<div>
+    <label>Name : </label>
+    <p> @traineeDeleted.Name </p>
+    <br />
+    <label>Email : </label>
+    <p> @traineeDeleted.Email </p>
+    <br />
+    <label>MobileNumber : </label>
+    <p> @traineeDeleted.MobileNumber </p>
+    <br />
+    <label>Gender : </label>
+    <p> @traineeDeleted.Gender </p>
+    <br />
+    <label>Birthdate : </label>
+    <p> @traineeDeleted.Birthdate </p>
+    <br />
+    <label>Graduated : </label>
+    <p> @traineeDeleted.IsGraduated </p>
+    <br />
+    <button class="btn btn-danger" @onclick="@(()=>deleteTrainee(Trainee_ID))">Delete</button> 
+</div>
+
+@code {
+    [Parameter]
+    public int Trainee_ID { get; set; }
+
+    List<Trainee> trainees;
+    public Trainee traineeDeleted;
+
+    protected override Task OnInitializedAsync()
+    {
+       
+        trainees = MyMocaData.trainees;
+
+        traineeDeleted = trainees.FirstOrDefault(T => T.Trainee_ID == Trainee_ID);
+
+
+        return base.OnInitializedAsync();
+    }
+    public void deleteTrainee(int id)
+
+    {
+        var T = trainees.FirstOrDefault(t => t.Trainee_ID == id);
+
+        trainees.Remove(T);
+        
+
+    }
+
+}
+

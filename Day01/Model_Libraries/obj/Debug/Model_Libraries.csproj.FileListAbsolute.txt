@@ -1,0 +1,5 @@
+D:\Blazor\Day01\Model_Libraries\bin\Debug\Model_Libraries.dll
+D:\Blazor\Day01\Model_Libraries\bin\Debug\Model_Libraries.pdb
+D:\Blazor\Day01\Model_Libraries\obj\Debug\Model_Libraries.csproj.CoreCompileInputs.cache
+D:\Blazor\Day01\Model_Libraries\obj\Debug\Model_Libraries.dll
+D:\Blazor\Day01\Model_Libraries\obj\Debug\Model_Libraries.pdb
