@@ -18,9 +18,7 @@ namespace Model_Libraries
                     Gender=Gender.female,
                     Birthdate=new DateTime(1998, 8, 22),
                     MobileNumber = "01015069799",
-                    Track_ID = 1
-                   
-
+                    
                 },
                 new Trainee {
                     Trainee_ID=2,
@@ -30,9 +28,7 @@ namespace Model_Libraries
                     Gender=Gender.male,
                     Birthdate=new DateTime(1996, 10, 2),
                     MobileNumber = "01015011111",
-                    Track_ID = 1
-                   
-
+                    
                 }
             };
 

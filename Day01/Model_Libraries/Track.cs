@@ -12,7 +12,7 @@ namespace Model_Libraries
         [Key]
         public int Track_ID { get; set; }
         [MaxLength(20)]
-        [Required]
+        [Required(ErrorMessage = "Track Name is Required")]
         public string Name { get; set; }
         [MaxLength(100)]
         [Required]

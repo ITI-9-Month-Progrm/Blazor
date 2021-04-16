@@ -11,21 +11,21 @@ namespace Model_Libraries
     {
         [Key]
         public int Trainee_ID { get; set; }
-        [Required]
+        [Required (ErrorMessage ="Trainee Name is Required")]
         public string Name { get; set; }
         public Gender Gender { get; set; }
-        [DataType(DataType.EmailAddress)]
+        [DataType(DataType.EmailAddress, ErrorMessage ="Trainee Email is Required")]
         [Required]
         public string Email { get; set; }
         [DataType(DataType.PhoneNumber)]
-        [Required]
+       
         public string MobileNumber { get; set; }
         [DataType(DataType.Date)]
         public DateTime Birthdate { get; set; }
         public Graduated IsGraduated { get; set; }
         //Relationship is many  -------> one
        //                trainees ----> Track
-       public int Track_ID { get; set; }
+       
        public virtual Track Track { get; set; }
 
     }
