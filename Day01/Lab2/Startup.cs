@@ -31,6 +31,10 @@ namespace Lab2
             services.AddDbContext<TraineeDbContext>(options =>
                  options.UseSqlServer("Server = (localdb)\\mssqllocaldb; Database=TraineeDB; Trusted_Connection=True; MultipleActiveResultSets=true")
             );
+
+            services.AddCors(options => options.AddPolicy("myPloicy",
+                builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod()));
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
@@ -48,6 +52,7 @@ namespace Lab2
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Lab2 v1"));
             }
 
+            app.UseCors("myPloicy");
             app.UseRouting();
 
             app.UseAuthorization();

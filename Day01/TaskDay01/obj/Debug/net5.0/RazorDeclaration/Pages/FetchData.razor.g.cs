@@ -89,6 +89,13 @@ using Model_Libraries;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "D:\Blazor\Day01\TaskDay01\_Imports.razor"
+using Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
     public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
     {

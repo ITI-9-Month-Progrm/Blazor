@@ -32,6 +32,7 @@
       "Microsoft.Extensions.FileProviders.Abstractions.dll": "sha256-aUKLFqSgB\/hwZc41dLVKoRSKRghShpfQPVMhoRzpz5M=",
       "Microsoft.Extensions.FileProviders.Physical.dll": "sha256-Cvhy7j568oPzBQKhakMhNkDr5tQBxE0LaY1wukd0Ll0=",
       "Microsoft.Extensions.FileSystemGlobbing.dll": "sha256-xrpMDo35bgwz\/m\/kwUvL9SAOxyEgSSwO57RiuhILHgI=",
+      "Microsoft.Extensions.Http.dll": "sha256-yUMvQwAOesiz+yHxElu\/ObK7gQIqcSR7vktOISpntaA=",
       "Microsoft.Extensions.Logging.dll": "sha256-VlsKv5zXgdK0MrYHXr9XlUCXwuwNI7AUI\/C1PEFXcz4=",
       "Microsoft.Extensions.Logging.Abstractions.dll": "sha256-9UNtwDMFW86VtnTtJFk9xcc1hCnXFGXccFv3SkbgYy0=",
       "Microsoft.Extensions.Options.dll": "sha256-YfK6Zl0RmlJUqBJD7Khy7u4HEW2DRne0VSiqA6Yqs0U=",
@@ -219,13 +220,13 @@
       "mscorlib.dll": "sha256-OoIy6q8Z4O5iSevqVXHfYC14mo\/kaxz74ydYX19CiAA=",
       "netstandard.dll": "sha256-FbW0xcZkySFb6B8yBpUE8XmaiMacDVdXdN9GeDH6xu4=",
       "System.Private.CoreLib.dll": "sha256-AQbVm+Z+NByScjRZWDWQnNUk5PBVgwCSWPLQN4YxxZs=",
-      "Model_Libraries.dll": "sha256-jDyCW2WUY9oTO9N9LafLFHqdq8ShGB9mkKZZ4XX2RQE=",
-      "TaskDay01.dll": "sha256-jFGjScO\/5ktdFGFSyF2HclfnVb+yOg\/fJ2jfB8Ga89E="
+      "Model_Libraries.dll": "sha256-c1qfEhkavLdDq\/lxnAGnYxm2jC17lzoDHZgn9bZPwd0=",
+      "TaskDay01.dll": "sha256-TeLTcOu+YQ\/EEXCfMXK5oKThEaq7JYLyhyz0pn80jmc="
     },
     "lazyAssembly": null,
     "pdb": {
-      "Model_Libraries.pdb": "sha256-WNNYN4OKYFXWhoJG0h4R4M4Tl2p2zMwVUMfI2hGEOXk=",
-      "TaskDay01.pdb": "sha256-wEGbhL35Qyv9iKLjetxArZioLIfPqlPZtsNCP4EEK2I="
+      "Model_Libraries.pdb": "sha256-NHpiVh1YTL96AoP5NaYlUuRu1xeBoziZHdxRKDtPjD0=",
+      "TaskDay01.pdb": "sha256-kAahpDx52WPyMJuLlZ5xIp9gZgTqDeTICuOs8l\/Jj\/8="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-rFG55cwkAnfHzxmxwBL2tTwfj8X8cjcSEAlco4bc1eo=",

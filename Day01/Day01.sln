@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskDay01", "TaskDay01\Task
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model_Libraries", "Model_Libraries\Model_Libraries.csproj", "{23491122-6E4F-4603-AEB0-E0E7ACE0CF40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab2API", "Lab2\Lab2API.csproj", "{9BD76998-638A-40EA-9EE3-FCB5D402032F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab2API", "Lab2\Lab2API.csproj", "{9BD76998-638A-40EA-9EE3-FCB5D402032F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

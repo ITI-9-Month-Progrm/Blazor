@@ -86,6 +86,13 @@ using Model_Libraries;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 12 "D:\Blazor\Day01\TaskDay01\_Imports.razor"
+using Services;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/")]
     public partial class Index : Microsoft.AspNetCore.Components.ComponentBase
     {

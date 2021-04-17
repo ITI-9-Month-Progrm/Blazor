@@ -1,0 +1,57 @@
+﻿@page "/TraineeDeleteDB/{Trainee_ID:int}"
+<h3>Delete Trainee</h3>
+@if (traineeDeleted != null)
+{<div>
+        <label>Name : </label>
+        <p> @traineeDeleted.Name </p>
+        <br />
+        <label>Email : </label>
+        <p> @traineeDeleted.Email </p>
+        <br />
+        <label>MobileNumber : </label>
+        <p> @traineeDeleted.MobileNumber </p>
+        <br />
+        <label>Gender : </label>
+        <p> @traineeDeleted.Gender </p>
+        <br />
+        <label>Birthdate : </label>
+        <p> @traineeDeleted.Birthdate </p>
+        <br />
+        <label>Graduated : </label>
+        <p> @traineeDeleted.IsGraduated </p>
+        <br />
+        <button class="btn btn-danger" @onclick="@(()=>deleteTrainee(Trainee_ID))">Delete</button>
+    </div> }
+else
+{
+    <div> Wait until loading finish............... </div>
+}
+
+
+@code {
+    [Parameter]
+    public int Trainee_ID { get; set; }
+
+    public Trainee traineeDeleted;
+    [Inject]
+    public ITraineeDataService traineeDataService { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+
+
+
+        traineeDeleted = await traineeDataService.GetTrainee(Trainee_ID);
+
+
+
+    }
+    public async void deleteTrainee(int id)
+
+    {
+        await traineeDataService.deleteTrainee(id);
+
+
+    }
+
+}
+

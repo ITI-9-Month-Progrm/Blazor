@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "coZvC3rQwswR38LhY5OMsReCh4ZMyhK9ERDvb9gHQ6Mf0689hN8GSEsR8QzGLgYa9xUdHFYdsSw8c3d1zRlyMg==",
+  "dgSpecHash": "gqct4niPhwylAUjBWZEo+sY7vmnB51gKb8EUQZWEKQoUOW/5llzpjAKeeWiG7sNUVxrDcUJ9F/yFPgPgpjncUA==",
   "success": true,
   "projectFilePath": "D:\\Blazor\\Day01\\Lab2\\Lab2API.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Asmaa\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
