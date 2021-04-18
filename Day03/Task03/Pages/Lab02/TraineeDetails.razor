@@ -1,0 +1,50 @@
+﻿@page "/TraineeDetailsDB/{Trainee_ID:int}"
+<h3>Trainee Details</h3>
+@if (traineeDetails != null)
+{
+    <div>
+        <label>Name : </label>
+        <p> @traineeDetails.Name </p>
+        <br />
+        <label>Email : </label>
+        <p> @traineeDetails.Email </p>
+        <br />
+        <label>MobileNumber : </label>
+        <p> @traineeDetails.MobileNumber </p>
+        <br />
+        <label>Gender : </label>
+        <p> @traineeDetails.Gender </p>
+        <br />
+        <label>Birthdate : </label>
+        <p> @traineeDetails.Birthdate </p>
+        <br />
+        <label>Graduated : </label>
+        <p> @traineeDetails.IsGraduated </p>
+        <br />
+    </div> }
+else
+{
+    <div> Wait until loading finish............... </div>
+}
+
+@code {
+    [Parameter]
+    public int Trainee_ID { get; set; }
+
+    List<Trainee> trainees;
+    public Trainee traineeDetails;
+
+    [Inject]
+    public ITraineeDataService traineeDataService { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+
+
+
+        traineeDetails = await traineeDataService.GetTrainee(Trainee_ID);
+
+
+
+    }
+
+}

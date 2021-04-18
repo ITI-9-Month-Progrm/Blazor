@@ -1,0 +1,29 @@
+﻿@page "/InterOp"
+<h3>InterOp</h3>
+@inject IJSRuntime JsRuntime
+<button @onclick="ConvertFromJSToCSharp">Js_To_C#</button>
+<p>@movie</p>
+@code {
+    //InterOp From Js To C#
+    //Call Js From C#
+    string movie;
+    async Task ConvertFromJSToCSharp()
+    {
+        await JsRuntime.InvokeVoidAsync("console.log", "C# Say Hello ^^");
+        await JsRuntime.InvokeVoidAsync("alert", "Javascript Say Hello To C# ");
+        movie = await JsRuntime.InvokeAsync<string>("prompt", "What is your favorite Movie ?");
+        await JsRuntime.InvokeVoidAsync("alert", movie);
+
+    }
+}
+
+<button onclick="GenerateRandumInt()">C#_To_Js</button>
+@code{
+    //InterOp From C# To Js
+    //Call C# From Js
+    [JSInvokable]
+    public static Task<int> getRandumNum()
+    {
+        return Task.FromResult(new Random().Next());
+    }
+}

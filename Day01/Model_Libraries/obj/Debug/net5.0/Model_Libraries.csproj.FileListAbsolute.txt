@@ -24,3 +24,4 @@ D:\Blazor\Day01\Model_Libraries\obj\Debug\net5.0\Model_Libraries.pdb
 D:\Blazor\Day01\Model_Libraries\bin\Debug\net5.0\Model_Libraries.runtimeconfig.json
 D:\Blazor\Day01\Model_Libraries\bin\Debug\net5.0\Model_Libraries.runtimeconfig.dev.json
 D:\Blazor\Day01\Model_Libraries\obj\Debug\net5.0\Model_Libraries.genruntimeconfig.cache
+D:\Blazor\Day01\Model_Libraries\obj\Debug\net5.0\Model_Libraries.csprojAssemblyReference.cache

@@ -1,0 +1,63 @@
+﻿@page "/TraineesDB"
+<h3>TraineesOverview</h3>
+<div>
+    <a class="btn btn-dark btn-outline-light" href="@($"AddTraineeDB")">Create</a>
+</div>
+@if (trainees != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile_Number</th>
+                <th>Gender</th>
+                <th>Graduated</th>
+                <th>Birthday</th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var trainee in trainees)
+            {
+                <tr>
+
+                    <td>@trainee.Name</td>
+                    <td>@trainee.Email</td>
+                    <td>@trainee.MobileNumber</td>
+                    <td>@trainee.Gender</td>
+                    <td>@trainee.IsGraduated</td>
+                    <td>@trainee.Birthdate</td>
+                    <td><a href="@($"TraineeDetailsDB/{trainee.Trainee_ID}")" class="btn btn-info">Details</a></td>
+                    <td><a href="@($"TraineeUpdateDB/{trainee.Trainee_ID}")" class="btn btn-warning">Update</a></td>
+                    <td><a href="@($"TraineeDeleteDB/{trainee.Trainee_ID}")" class="btn btn-danger">Delete</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div> Wait until loading finish............... </div>
+}
+
+
+
+@code {
+
+    public List<Trainee> trainees;
+
+    [Inject]
+    public ITraineeDataService _TraineeDataService { get; set; }
+    protected async override Task OnInitializedAsync()
+    {
+        trainees = await _TraineeDataService.GetTrainees();
+
+
+
+        //return base.OnInitializedAsync();
+    }
+}
